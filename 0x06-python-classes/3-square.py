@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 class Square:
-    """Represents a class square 
-    and private instance attribute: size"""
+    """Represents a class square and private instance attribute: size"""
     def __init__(self, size=0):
         """initialise data"""
         if not isinstance(size, int):
@@ -11,10 +10,5 @@ class Square:
         self.__size = size
 
     def area(self):
-        """Public instance method: 
-        
-        Returns:
-        int: current square area
-
-        """
+        """ Returns: current square area"""
         return (self.__size ** 2)
