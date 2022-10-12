@@ -1,16 +1,23 @@
 #!/usr/bin/python3
+"""class Node that defines a node of a singly linked list by:
+
+    Private instance attribute: data:
+    property def data(self): to retrieve it
+    property setter def data(self, value): to set it:
+        data must be an integer, otherwise raise a TypeError exception with
+        the message data must be an integer
+        Private instance attribute: next_node:
+            property def next_node(self): to retrieve it
+            property setter def next_node(self, value): to set it:
+                next_node can be None or must be a Node, otherwise raise a
+                TypeError exception with the message next_node must be a
+                Node object
+                Instantiation with data and next_node: def __init__(self,
+                data, next_node=Node)
+"""
 
 
 class Node:
-    """Node of a singly linked list.
-    Private instance attribute: data:
-        - property def data(self)
-        - property setter def data(self, value)
-    Private instance attribute: next_node:
-        - property def next_node(self)
-        - property setter def next_node(self, value)
-    Instantiation with data and next_node.
-    """
 
     def __init__(self, data, next_node=None):
         """Initializes the data of the node."""
@@ -40,6 +47,17 @@ class Node:
         if not isinstance(value, Node) and value is not None:
             raise TypeError("next_node must be a Node object")
         self.__next_node = value
+
+
+"""Private instance attribute: head (no setter or getter)
+Simple instantiation: def __init__(self):
+    Should be printable:
+        print the entire list in stdout
+        one node number by line
+        Public instance method: def sorted_insert(self, value):
+        that inserts a new Node into the correct sorted position in the list
+        (increasing order)
+"""
 
 
 class SinglyLinkedList:
@@ -80,4 +98,4 @@ class SinglyLinkedList:
         while node.next_node and node.next_node.data < value:
             node = node.next_node
         new_node.next_node = node.next_node
-        node.next_node = new_node
+        node.next_node = new_nod
