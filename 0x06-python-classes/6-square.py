@@ -24,6 +24,8 @@ Private instance attribute: size:
                     position should be use by using space - Don’t fill line
                     s by spaces when position[1] > 0
 """
+
+
 class Square:
     """Represents a square class
     """
