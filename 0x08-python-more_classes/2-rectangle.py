@@ -83,6 +83,6 @@ class Rectangle:
     def perimeter(self):
         """Returns perimeter if width amd height is not equal to zero"""
         if self.__height == 0 or self.__width == 0:
-            return "Can not calcualte area"
+            return 0
         else:
             return (self.__width + self.__height) * 2
