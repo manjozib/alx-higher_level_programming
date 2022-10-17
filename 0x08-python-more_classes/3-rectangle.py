@@ -86,7 +86,7 @@ class Rectangle:
     def __str__(self):
         """Returns a string of # if all dimensions are not equal to zer0"""
         if self.__height == 0 or self.__width == 0:
-            return " "
+            return ""
         else:
             rec_hash = ""
             for i in range(self.__height):
